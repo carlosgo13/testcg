@@ -1,0 +1,3 @@
+variable "cird" {
+    type = "string"
+}
