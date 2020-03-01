@@ -1,0 +1,7 @@
+lib
+bin
+include
+__pycache__
+.DS_Store
+pyvenv.cfg
+*.zip

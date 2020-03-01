@@ -1,0 +1,6 @@
+flask
+Pillow
+flask_expects_json
+requests
+flask-lambda-python36
+http-prompt
