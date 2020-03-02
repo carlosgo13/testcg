@@ -23,3 +23,9 @@ variable "database_username" {
 variable "database_password" {
     type = "string"
 }
+variable "security_group_id" {
+    type = "string"
+}
+variable "database_engine_version" {
+    type = "string"
+}

@@ -13,11 +13,11 @@ variable "database_cluster_name" {
 }
 variable "database_engine_type" {
     type = "string"
-    default = "aurora-mysql"
+    default = "aurora"
 }
 variable "database_zones" {
     type = "list"
-    default = ["us-east-1a", "us-east-1a"]
+    default = ["us-east-1b", "us-east-1d", "us-east-1e"]
 }
 variable "database_name" {
     type = "string"
@@ -30,6 +30,11 @@ variable "database_username" {
 variable "database_password" {
     type = "string"
 }
+variable "database_engine_version" {
+    type = "string"
+    default = "5.6.10a"
+}
+
 ######### VPC ###########
 variable "cird_block" {
     type = "string"
@@ -50,6 +55,14 @@ variable "private_subnet" {
     default = {
         "zone" = "us-east-1b"
         "subnet" = "10.0.2.0/24"
+        "tag" = "cg_private_subnet"
+    }
+}
+variable "private_subnet-c" {
+    type = "map"
+    default = {
+        "zone" = "us-east-1c"
+        "subnet" = "10.0.3.0/24"
         "tag" = "cg_private_subnet"
     }
 }
@@ -90,4 +103,49 @@ variable "sg_in_cidr" {
 variable "sg_name" {
     type = "string"
     default = "sg_general"
+}
+variable "sg_aurora_name" {
+    type = "string"
+    default = "sg_aurora"
+}
+variable "sg_ecs_name" {
+    type = "string"
+    default = "sg_ecs"
+}
+####### ECR #########
+variable "ecr_name" {
+    type = "string"
+    default = "ecr-cg"
+}
+####### ECS #########
+variable "ecs_cluster_name" {
+    type = "string"
+    default = "ecs-cluster-cg"
+}
+variable "ecs_service_name" {
+    type = "string"
+    default = "backend"
+}
+variable "ecs_service_desired_count" {
+    default = 1
+}
+variable "ecs_service_launch_type" {
+    type = "string"
+    default = "EC2"
+}
+variable "ecs_service_container_name" {
+    type = "string"
+    default = "backend"
+}
+variable "ecs_service_container_port" {
+    default = 8080
+}
+variable "ecs_task_definition_name" {
+    type = "string"
+    default = "backend-task-definition"
+}
+####### ALB #########
+variable "alb_name" {
+    type = "string"
+    default = "alb"
 }
