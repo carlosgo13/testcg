@@ -49,9 +49,9 @@ Ir a la carpeta de su gusto y correr alguno de los siguientes comandos:
 ## 7. Hacer push de la imagen de docker:
 
 - Cambiar nuevamente al path ecs.
-- Correr: docker tag backend **ecr_endpoint**:0.2.
+- Correr: docker tag backend **<ecr_endpoint>**:0.2.
 - Ejecutar **aws ecr get-login** para tomar el link de login a usar.
-- Finalmente hacer push: docker push **ecr_endpoint**:0.2.
+- Finalmente hacer push: docker push **<ecr_endpoint>**:0.2.
 
 ## 8. Subir el zip a la lambda:
 
