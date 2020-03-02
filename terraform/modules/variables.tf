@@ -149,3 +149,20 @@ variable "alb_name" {
     type = "string"
     default = "alb"
 }
+####### ASG #########
+variable "ecs_instance_type" {
+    type = "string"
+    default = "t2.micro"
+}
+variable "spot_bid_price" {
+    type = "string"
+    default = "0.0113"
+}
+variable "ecs_max_count" {
+    type = "string"
+    default = "1"
+}
+variable "ecs_min_count" {
+    type = "string"
+    default = "1"
+}

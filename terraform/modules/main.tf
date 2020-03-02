@@ -96,6 +96,12 @@ module "ecs_cluster" {
     database_name = "${var.database_name}"
     database_pass = "${var.database_password}"
     target_group_arn = "${module.alb.alb_target_group_arn}"
+    subnets_id = ["${module.private_subnet.subnet_id}", "${module.private_subnet_c.subnet_id}"]
+    ecs_instance_type = "${var.ecs_instance_type}"
+    spot_bid_price = "${var.spot_bid_price}"
+    sg_ecs_name = "${module.security_group_ecs.security_group_id}"
+    ecs_min_count = "${var.ecs_min_count}"
+    ecs_max_count = "${var.ecs_max_count}"
 }
 module "alb" {
     source = "../resources/alb"

@@ -35,3 +35,22 @@ variable "database_pass" {
 variable "target_group_arn" {
     type = "string"
 }
+variable "ecs_max_count" {
+    type = "string"
+}
+variable "ecs_min_count" {
+    type = "string"
+}
+variable "subnets_id" {
+    type = "list"
+}
+variable "ecs_instance_type" {
+    type = "string"
+}
+variable "spot_bid_price" {
+    type = "string"
+}
+variable "sg_ecs_name" {
+    type = "string"
+}
+
