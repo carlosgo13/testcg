@@ -7,6 +7,7 @@
 - Python3.7.
 - Docker.
 - AWS CLI.
+- Configurar las credenciales de AWS localmente.
 
 ## 2. Descargar el repositorio de Git:
 
