@@ -6,6 +6,7 @@
 - Git.
 - Python3.7.
 - Docker.
+- curl.
 - AWS CLI.
 - Configurar las credenciales de AWS localmente.
 
@@ -57,6 +58,11 @@ Ir a la carpeta de su gusto y correr alguno de los siguientes comandos:
 
 - Cambiar a lambda/frontend.
 - Ejecutar: aws lambda update-function-code --function-name **<lambda_name>** --zip-file fileb://<function-name>.zip
+
+## 9. Probar la api:
+
+- Correr: curl -iL -X POST -d '{"numberone":**<numero>**,"numbertwo":**<numero>**}' **<api_gateway_endpoint>**  --header "Content-Type:application/json"
+- Debe retornar un JSON con el resultado y el status.
 
 # Technical debt list:
 
